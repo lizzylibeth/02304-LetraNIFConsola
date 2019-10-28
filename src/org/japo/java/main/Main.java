@@ -30,24 +30,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        char letraDNI;
+        //variables
+        char letraDni;
 
         try {
 
             //Leer Dato
             System.out.print("Letra DNI? ...............: ");
-            letraDNI = SCN.nextLine().charAt(0);
+            letraDni = SCN.nextLine().charAt(0);
             //Lo que ocurre es que de un string, coge el primer carácter
 
             //Mensaje
-            System.out.printf("Letra DNI ................: %C%n", letraDNI);
+            System.out.printf("Letra DNI ................: %C%n", letraDni);
 
         } catch (Exception e) {
 
             //Mensaje
             System.out.println("ERROR: Entrada Incorrecta");
 
-        }//CATCH
+        } finally {
+            SCN.nextLine(); //Borrar buffer     
+        }
 
     }//main
 
